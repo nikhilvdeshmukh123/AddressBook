@@ -10,7 +10,8 @@ public class AddressBookMain {
 		int option;
 		do {
 			System.out.println("-------------------------------------------------");
-			System.out.println("Press\n1. To add a new contact \n2. To display contact \n3. To exit");
+			System.out.println(
+					"Press\n1. To add a new contact \n2. To display contact \n3. To edit contact \n4. To exit");
 			option = sc.nextInt();
 			sc.nextLine();
 			switch (option) {
@@ -21,11 +22,12 @@ public class AddressBookMain {
 				addressBook.displayContact();
 				break;
 			case 3:
+				addressBook.editContact();
 				break;
 			default:
 				System.out.println("Enter a valid option");
 				break;
 			}
-		} while (option != 3);
+		} while (option != 4);
 	}
 }
